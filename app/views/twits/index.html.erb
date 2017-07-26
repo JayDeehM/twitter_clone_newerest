@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default" id="header">
+  <div class="container-fluid">
+    <span onclick="openNav()" ><%= image_tag current_user.avatar(:thumb), id:"nav"%></span>
+    <h1 id="home">Home</h1>
+    <%= link_to ( image_tag 'tweet.png', class: 'image responsive', id:"tweet"), new_twit_path %>  
+   </div>
+</nav>
+
+    <% @twits.each do |twit| %>
+    <div class="panel panel-default">
+      <div class="panel-body"> 
+        <%= image_tag twit.user.avatar(:thumb), id:"dppost" %>
+        <p id="postname">@<%= twit.user.username %></p>
+        <p><%= twit.user.email %></p><br />
+        <p id="post"><%= twit.body %></p>
+        <td><%= link_to 'Show', twit %></td>
+        <td><%= link_to 'Edit', edit_twit_path(twit) %></td>
+        <td><%= link_to 'Destroy', twit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
+    </div> 
+    <% end %>
+
+<br>
+
+
+<p id="notice"><%= notice %></p>
