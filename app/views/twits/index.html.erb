@@ -1,10 +1,19 @@
-<nav class="navbar navbar-default" id="header">
-  <div class="container-fluid">
-    <span onclick="openNav()" ><%= image_tag current_user.avatar(:thumb), id:"nav"%></span>
-    <h1 id="home">Home</h1>
-    <%= link_to ( image_tag 'tweet.png', class: 'image responsive', id:"tweet"), new_twit_path %>  
-   </div>
-</nav>
+<div id="headbar">
+  <nav class="navbar navbar-default" id="header">
+    <div class="container-fluid">
+      <span onclick="openNav()" ><%= image_tag current_user.avatar(:thumb), id:"nav"%></span>
+      <h1 id="home">Home</h1>
+      <span onclick="openNav2()" ><%= image_tag 'tweet.png', class: 'image responsive', id:"tweet" %></span>  
+     </div>
+  </nav>
+</div>  
+
+<div id="mySidenav2" class="sidenav2">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+     <h1>New Twit</h1>
+        <%= render 'form' %>
+        <%= link_to 'Back', twits_path %>
+</div>
 
     <% @twits.each do |twit| %>
     <div class="panel panel-default">
@@ -13,9 +22,21 @@
         <p id="postname">@<%= twit.user.username %></p>
         <p><%= twit.user.email %></p><br />
         <p id="post"><%= twit.body %></p>
-        <td><%= link_to 'Show', twit %></td>
-        <td><%= link_to 'Edit', edit_twit_path(twit) %></td>
-        <td><%= link_to 'Destroy', twit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <div class="btn-group">
+            <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+              <span id="options"><%= image_tag 'options.png', class: 'image responsive', id:'optdot' %></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" >
+              <li><a><%= link_to 'Show', twit %></a></li>
+                <% if twit.user.username == current_user.username %>
+                  <li><a><%= link_to 'Destroy', twit, method: :delete, data: { confirm: 'Are you sure?' } %></a></li>
+                <% end %>
+             </ul>
+          </div>
+            
+              
+                
+              
       </div>
     </div> 
     <% end %>

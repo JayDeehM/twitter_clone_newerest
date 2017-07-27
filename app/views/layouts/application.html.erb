@@ -12,7 +12,7 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
    <% if user_signed_in? %>
-     <%= image_tag current_user.avatar(:medium), id:"dpnav" %>
+     <%= image_tag current_user.avatar, id:"dpnav" %>
      <p id="dpname">@<%= current_user.username %></p>
      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
@@ -22,6 +22,7 @@
    <% end %>
 </div>
  
+
  <div id="main">
     <%= yield %>
  </div>  

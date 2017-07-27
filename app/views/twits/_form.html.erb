@@ -1,4 +1,4 @@
-<%= form_for(@twit) do |f| %>
+<%= form_for(@twit = Twit.new) do |f| %>
   <% if @twit.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@twit.errors.count, "error") %> prohibited this twit from being saved:</h2>
@@ -14,8 +14,7 @@
   
   
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, id:"text-area" %>
   </div>
   
   <div class="actions">

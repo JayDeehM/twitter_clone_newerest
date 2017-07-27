@@ -16,17 +16,25 @@
 //= require_tree .
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("mySidenav").style.width = "50%";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
 }
 
-$(document).ready(function(){
-    $("#tweet").click(function(){
-        $("#modal").modal();
-    });
-});
+function openNav2() {
+    document.getElementById("mySidenav2").style.width = "50%";
+}
+
+function closeNav2() {
+    document.getElementById("mySidenav2").style.width = "0";
+}
+
+function openNav3() {
+    document.getElementById("mySidenav3").style.width = "50%";
+}
+
+function closeNav3() {
+    document.getElementById("mySidenav3").style.width = "0";
+}
