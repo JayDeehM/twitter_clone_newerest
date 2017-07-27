@@ -38,3 +38,15 @@ function openNav3() {
 function closeNav3() {
     document.getElementById("mySidenav3").style.width = "0";
 }
+
+function maxLength(el) {	
+	if (!('maxLength' in el)) {
+		var max = el.attributes.maxLength.value;
+		el.onkeypress = function () {
+			if (this.value.length >= max) return false;
+		};
+	}
+}
+
+maxLength(document.getElementById("text-area"));
+

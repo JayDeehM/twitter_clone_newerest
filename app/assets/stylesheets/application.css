@@ -21,7 +21,7 @@ body {
 }
 
 #header {
-    background-color: #f5f8fa;
+    background-color: white;
     position: fixed;
     width: 100%;
     margin-left: -16px;
@@ -59,7 +59,7 @@ body {
     z-index: 2;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: rgba(101,119,134,0.98);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -69,16 +69,16 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: black;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    background-color: #1da1f2;
 }
 
-.sidenav .closebtn {
+#close {
     position: absolute;
     top: 0;
     right: 25px;
@@ -105,7 +105,7 @@ body {
 #dpname {
     font-size: 30px;
     margin-top: 30px;
-    margin-bottom: 170;
+    margin-bottom: 200px;
 }
 
 #dppost {
@@ -129,7 +129,7 @@ body {
     z-index: 2;
     top: 0;
     right: 0;
-    background-color: #657786;
+    background-color: rgba(101,119,134,0.98);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -149,18 +149,18 @@ body {
     background-color: #1da1f2;
 }
 
-.sidenav2 .closebtn {
+#close2 {
     position: absolute;
     top: 0;
-    left: -5px;
-    font-size: 60px;
+    left: 30px;
+    font-size: 40px;
     margin-right: 0px;
 }
 
 #text-area {
     width: 100%;
     height: 200px;
-    background-color: #aab8c2;
+    background-color: #f5f8fa;
 }
 
 .btn-group {
@@ -172,4 +172,16 @@ body {
     width: 20px;
     height: 20px;
     z-index: -1;
+}
+
+#edit {
+    text-align: center
+}
+
+#avatarenter {
+    margin-left: 500px;
+}
+
+#login {
+    text-align: center;
 }

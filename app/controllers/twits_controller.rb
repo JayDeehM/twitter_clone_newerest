@@ -1,5 +1,6 @@
 class TwitsController < ApplicationController
   before_action :set_twit, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!
 
 
   # GET /twits
@@ -29,7 +30,7 @@ class TwitsController < ApplicationController
     @twit.user_id = current_user.id
     respond_to do |format|
       if @twit.save
-        format.html { redirect_to @twit, notice: 'Twit was successfully created.' }
+        format.html { redirect_to twits_index_path, notice: 'Twit was successfully created.' }
         format.json { render :show, status: :created, location: @twit }
       else
         format.html { render :new }

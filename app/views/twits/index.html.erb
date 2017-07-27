@@ -9,7 +9,7 @@
 </div>  
 
 <div id="mySidenav2" class="sidenav2">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  <span href="javascript:void(0)" class="glyphicon glyphicon-remove" onclick="closeNav2()" id="close2"></span>
      <h1>New Twit</h1>
         <%= render 'form' %>
         <%= link_to 'Back', twits_path %>
@@ -33,10 +33,6 @@
                 <% end %>
              </ul>
           </div>
-            
-              
-                
-              
       </div>
     </div> 
     <% end %>
