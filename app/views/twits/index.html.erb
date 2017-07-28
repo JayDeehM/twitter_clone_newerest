@@ -23,6 +23,7 @@
         <p id="postname">@<%= twit.user.username %></p>
         <p><%= twit.user.email %></p><br />
         <p id="post"><%= twit.body %></p>
+        <p id="imagepost"><%= image_tag twit.image.url(:medium) %></p>
           <div class="btn-group">
             <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
               <span id="options"><%= image_tag 'options.png', class: 'image responsive', id:'optdot' %></span>

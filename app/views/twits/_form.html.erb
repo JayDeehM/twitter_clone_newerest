@@ -1,4 +1,4 @@
-<%= form_for(@twit = Twit.new) do |f| %>
+<%= form_for @twit = Twit.new, html: { multipart: true } do |f| %>
   <% if @twit.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@twit.errors.count, "error") %> prohibited this twit from being saved:</h2>
@@ -11,7 +11,10 @@
     </div>
   <% end %>
 
-  
+  <div class="field" >
+    <%= f.label :image %><br />
+    <%= f.file_field :image, autofocus: true %>
+  </div>
   
   <div class="field" >
     <%= f.text_area :body, id:"text-area", maxlength: 140 %>
