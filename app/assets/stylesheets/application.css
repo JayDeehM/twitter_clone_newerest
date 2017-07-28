@@ -168,8 +168,11 @@ body {
 }
 
 .btn-group {
-    float: right;
-    margin-top: -120px;
+    border-style: none;
+}
+
+#options {
+    border-style: none;
 }
 
 #optdot {

@@ -25,10 +25,10 @@
         <p id="post"><%= twit.body %></p>
         <p id="imagepost"><%= image_tag twit.image.url(:medium) %></p>
           <div class="btn-group">
-            <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
-              <span id="options"><%= image_tag 'options.png', class: 'image responsive', id:'optdot' %></span>
+            <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"  id="options">
+              <span><%= image_tag 'options.png', class: 'image responsive', id:'optdot' %></span>
             </a>
-            <ul class="dropdown-menu dropdown-menu-right" >
+            <ul class="dropdown-menu dropdown-menu-left" >
               <li><a><%= link_to 'Show', twit %></a></li>
                 <% if twit.user.username == current_user.username %>
                   <li><a><%= link_to 'Destroy', twit, method: :delete, data: { confirm: 'Are you sure?' } %></a></li>
