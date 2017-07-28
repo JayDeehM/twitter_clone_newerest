@@ -183,7 +183,8 @@ body {
 }
 
 #avatarenter {
-    margin-left: 500px;
+    margin: auto;
+    display: block;
 }
 
 #login {
