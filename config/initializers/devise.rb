@@ -6,6 +6,7 @@ Devise.setup do |config|
   config.scoped_views = true
   config.reset_password_keys = [ :username ]
   config.confirmation_keys = [ :username ]
+  config.timeout_in = 2.minutes
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
