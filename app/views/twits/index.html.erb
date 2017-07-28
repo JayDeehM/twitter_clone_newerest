@@ -8,11 +8,12 @@
   </nav>
 </div>  
 
+<p id="notice"><%= notice %></p>
+
 <div id="mySidenav2" class="sidenav2">
   <span href="javascript:void(0)" class="glyphicon glyphicon-remove" onclick="closeNav2()" id="close2"></span>
-     <h1>New Twit</h1>
+     <h1 id="ntwit">New Twit</h1>
         <%= render 'form' %>
-        <%= link_to 'Back', twits_path %>
 </div>
 
     <% @twits.each do |twit| %>
@@ -40,4 +41,3 @@
 <br>
 
 
-<p id="notice"><%= notice %></p>

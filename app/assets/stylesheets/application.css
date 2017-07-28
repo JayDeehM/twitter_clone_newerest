@@ -59,7 +59,7 @@ body {
     z-index: 2;
     top: 0;
     left: 0;
-    background-color: rgba(101,119,134,0.98);
+    background-color: rgba(101,119,134,0.93);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -84,6 +84,7 @@ body {
     right: 25px;
     font-size: 40px;
     margin-left: 50px;
+    margin-top: 15px;
 }
 
 #main {
@@ -129,7 +130,7 @@ body {
     z-index: 2;
     top: 0;
     right: 0;
-    background-color: rgba(101,119,134,0.98);
+    background-color: rgba(101,119,134,0.93);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -155,12 +156,15 @@ body {
     left: 30px;
     font-size: 40px;
     margin-right: 0px;
+    margin-top: 15px;
 }
 
 #text-area {
-    width: 100%;
+    width: 95%;
     height: 200px;
     background-color: #f5f8fa;
+    display: block;
+    margin: auto;
 }
 
 .btn-group {
@@ -187,5 +191,13 @@ body {
 }
 
 #sign-up {
+    text-align: center;
+}
+
+#submit {
+    float: right;
+}
+
+#ntwit {
     text-align: center;
 }
