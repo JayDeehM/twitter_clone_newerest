@@ -2,7 +2,7 @@
   <nav class="navbar navbar-default" id="header">
     <div class="container-fluid">
       <span onclick="openNav()" ><%= image_tag current_user.avatar(:thumb), id:"nav"%></span>
-      <h1 id="home">Home</h1>
+      <span onclick="scrolltoTop()"><%= image_tag 'bird.png', class: 'image responsive',  id:"home" %></span>
       <span onclick="openNav2()" ><%= image_tag 'tweet.png', class: 'image responsive', id:"tweet" %></span>  
      </div>
   </nav>

@@ -50,3 +50,7 @@ function maxLength(el) {
 
 maxLength(document.getElementById("text-area"));
 
+function scrolltoTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

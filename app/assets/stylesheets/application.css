@@ -40,9 +40,11 @@ body {
 }
 
 #home {
-    text-align: center;
-    font-weight: bold;
-    margin-top: -45px;
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 55px;
+    margin-top: -50px;
 }
 
 #tweet {
